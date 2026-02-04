@@ -1,3 +1,6 @@
+package util;
+
+import model.Vessel;
 import java.util.ArrayList;
 import java.util.List;
 

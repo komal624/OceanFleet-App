@@ -1,5 +1,10 @@
+package ui;
+
+import model.Vessel;
+import util.VesselUtil;
 import java.util.List;
 import java.util.Scanner;
+
 
 public class UserInterface {
 
