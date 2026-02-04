@@ -8,11 +8,14 @@ public class UserInterface {
         Scanner scanner = new Scanner(System.in);
         VesselUtil vesselUtil = new VesselUtil();
 
+        // Step 1: Number of vessels
         System.out.println("Enter the number of vessels to be added");
         int n = scanner.nextInt();
         scanner.nextLine(); // clear buffer
 
+        // Step 2: Input vessel details
         System.out.println("Enter vessel details");
+        System.out.println("Format: vesselId:vesselName:averageSpeed:vesselType");
 
         for (int i = 0; i < n; i++) {
             String input = scanner.nextLine();
@@ -25,9 +28,11 @@ public class UserInterface {
                     data[3]
             );
 
+            // UC2 call
             vesselUtil.addVesselPerformance(vessel);
         }
 
+        // Step 3: UC3 - Search by ID
         System.out.println("Enter the Vessel Id to check speed");
         String searchId = scanner.nextLine();
 
@@ -44,7 +49,7 @@ public class UserInterface {
             System.out.println("Vessel Id " + searchId + " not found");
         }
 
-
+        // Step 4: UC4 - High Performance Vessels
         System.out.println("High performance vessels are");
 
         List<Vessel> highPerf = vesselUtil.getHighPerformanceVessels();
