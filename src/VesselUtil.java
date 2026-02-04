@@ -20,15 +20,13 @@ public class VesselUtil {
         vesselList.add(vessel);
     }
 
-    // Requirement 2: Get Vessel by ID (Case-Sensitive)
     public Vessel getVesselById(String vesselId) {
-
         for (Vessel vessel : vesselList) {
-            if (vessel.getVesselId().equals(vesselId)) {
+            if (vessel.getVesselId().equals(vesselId)) { // Case-sensitive check
                 return vessel;
             }
         }
-        return null;
+        return null; // If not found
     }
 
     // Requirement 3: Get High Performance Vessels

@@ -44,6 +44,7 @@ public class UserInterface {
             System.out.println("Vessel Id " + searchId + " not found");
         }
 
+
         System.out.println("High performance vessels are");
 
         List<Vessel> highPerf = vesselUtil.getHighPerformanceVessels();
